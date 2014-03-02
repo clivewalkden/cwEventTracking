@@ -1,0 +1,21 @@
+{
+  "name": "cw-event-tracking",
+  "version": "0.1.0",
+  "ignore": [
+  	"src",
+  	"**/*.txt",
+  	".editorconfig",
+  	".travis.yml",
+  	".bowerrc",
+  	".jshintrc",
+  	"index.html",
+  	"CONTRIBUTING.md"
+  ],
+  "dependencies": {
+  	"jquery": "~1.7"
+  	},
+  "devDependencies": {
+    "qunit": "~1.12.0",
+    "jquery": "~1.7"
+  }
+}
