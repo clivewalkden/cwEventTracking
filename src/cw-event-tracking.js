@@ -17,6 +17,9 @@
 			baseHref	: '',
 			debug		: false,
 			active		: false,
+			isActive 	: function(){},
+			isInactive 	: function(){},
+			isClicked	: function(){},
 		};
 
 		// Merge default and user settings
@@ -28,7 +31,9 @@
 
 				if (typeof _gaq === 'undefined') {
 					methods.debug('Analytics is not running');
+					settings.isInactive.call($(this));
 				}else{
+					settings.isActive.call($(this));
 					settings.active = true;
 				}
 			},
@@ -82,12 +87,14 @@
 
 			if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
 				$(this).on('click',function() {
+					settings.isClicked.call($(this));
 					methods.debug('External Link clicked.');
 					methods.handleExternal(href);
 				});
 			}
 			else if (href && href.match(settings.mailtypes)) {
 				$(this).on('click',function() {
+					settings.isClicked.call($(this));
 					methods.debug('Email Link clicked.');
 					methods.handleMail(href);
 				});
@@ -95,12 +102,14 @@
 			else if (href && href.match(settings.teltypes)) {
 				$(this).attr('href',href.replace(' ',''));
 				$(this).on('click',function() {
+					settings.isClicked.call($(this));
 					methods.debug('Telephone Link clicked.');
 					methods.handleTelephone(href);
 				});
 			}
 			else if (href && href.match(settings.filetypes)) {
 				$(this).on('click',function() {
+					settings.isClicked.call($(this));
 					methods.debug('File Link clicked.');
 					methods.handleFile(href);
 				});

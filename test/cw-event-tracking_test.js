@@ -20,10 +20,17 @@
       throws(block, [expected], [message])
   */
 
-  module('jQuery#cw_event_tracking', {
+  module('CWEventTracking', {
     // This will run before each test in this module.
     setup: function() {
-      this.elems = $('#qunit-fixture').children();
+      this.elems = $('#qunit-fixture > a');
+
+      this.elems.CWEventTracking({
+        isClicked: function(){
+          ok(true,'Element Clicked');
+          start();
+        }
+      });
     }
   });
 
@@ -33,30 +40,27 @@
     strictEqual(this.elems.CWEventTracking(), this.elems, 'should be chainable');
   });
 
-  test('is awesome', function() {
+  test('analytics check', function() {
     expect(1);
-    strictEqual(this.elems.CWEventTracking().text(), 'awesome0awesome1awesome2', 'should be awesome');
+    stop();
+  
+    this.elems.CWEventTracking({
+      isActive: function(){
+        ok(true,'Analytics is available');
+        start();
+      },
+      isInactive: function(){
+        ok(false,'Analytics is not available');
+        start();
+      }
+    });
   });
 
-  module('jQuery.CWEventTracking');
-
-  test('is awesome', function() {
-    expect(2);
-    strictEqual($.CWEventTracking(), 'awesome.', 'should be awesome');
-    strictEqual($.awesome({punctuation: '!'}), 'awesome!', 'should be thoroughly awesome');
-  });
-
-  module(':awesome selector', {
-    // This will run before each test in this module.
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
-
-  test('is awesome', function() {
+  test('link is clicked', function() {
     expect(1);
-    // Use deepEqual & .get() when comparing jQuery objects.
-    deepEqual(this.elems.filter(':awesome').get(), this.elems.last().get(), 'knows awesome when it sees it');
+    stop();
+
+    $('#qunit-fixture > a').eq(1).trigger('click');
   });
 
 }(jQuery));
