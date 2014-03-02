@@ -48,7 +48,9 @@ module.exports = function (grunt) {
     qunit: {
       all: {
         options: {
-          urls: ['http://localhost:9000/test/<%= pkg.name %>.html']
+          urls: ['1.7.0','1.7.1','1.7.2','1.8.0','1.8.1','1.8.2','1.8.3','1.9.0','1.9.1','1.10.0','1.10.1','1.10.2','1.11.0','2.0.0','2.0.1','2.0.2','2.0.3','2.1.0'].map(function(version) {
+            return 'http://localhost:<%= connect.server.options.port %>/test/cw-event-tracking.html?jquery=' + version;
+          })
         }
       }
     },
