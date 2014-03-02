@@ -17,8 +17,8 @@
 			baseHref	: '',
 			debug		: false,
 			active		: false,
-			isActive 	: function(){},
-			isInactive 	: function(){},
+			isActive	: function(){},
+			isInactive	: function(){},
 			isClicked	: function(){},
 		};
 
