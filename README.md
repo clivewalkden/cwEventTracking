@@ -34,5 +34,11 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Release History
+#### 0.1.2
+ * Updated bower config again to remove lib folder
+
+#### 0.1.1
+ * Updated bower config
+
 #### 0.1.0
  * Initial release

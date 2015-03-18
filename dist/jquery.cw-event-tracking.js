@@ -6,7 +6,7 @@
 *
 * @package CW Event Tracking
 * @author Clive Walkden (https://github.com/clivewalkden)
-* @version 0.1.1
+* @version 0.1.2
 * @copyright Copyright (c) 2015 Clive Walkden (https://github.com/clivewalkden)
 * @date: 2015-03-18
 */
