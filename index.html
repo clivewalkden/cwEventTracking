@@ -1,37 +1,169 @@
 <!DOCTYPE html>
-<html>
 <head>
-	<meta charset="utf-8">
-	<title>CW Event Tracking</title>
-	<!-- Load local jQuery. -->
-	<script src="bower_components/jquery/jquery.js"></script>
-	<!-- Load local lib and tests. -->
-	<script src="src/cw-event-tracking.js"></script>
-	<script>
-	  var _gaq=[['_setAccount','UA-38760705-2'],['_trackPageview']];
-	  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	  s.parentNode.insertBefore(g,s)}(document,'script'));
-	</script>
-	<script>
-	$(function(){
-		$('a').CWEventTracking({'debug':true});
-	})
-	</script>
+<meta charset="UTF-8">
+<title>CW Event Tracking v0.1.1 | jQuery Plugin | Clive Walkden</title>
+<meta name="description" content="A jQuery plugin to automatically add Google Analytics tracking to certain links">
 
-	<style>
-	.wrapper { width: 990px; margin: 0 auto; }
+<meta name="viewport" content="width=device-width">
 
-	.wrapper > a { display: block; margin-bottom: 1em; }
-	</style>
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+<link href="http://clivewalkden.co.uk/code/template/css/bootstrap.css" rel="stylesheet">
+<link href="http://clivewalkden.co.uk/code/template/css/main.css" rel="stylesheet">
+<link href="http://clivewalkden.co.uk/code/template/css/prettify.css" rel="stylesheet">
 </head>
 <body>
-	<div class="wrapper clearfix">
-		<a href="index.html">Internal Link</a>
-		<a href="http://www.google.co.uk">External Link</a>
-		<a href="something.pdf">PDF</a>
-		<a href="mailto:clivewalkden@gmail.com">Email</a>
-		<a href="tel:012345678910">Telephone</a>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+    <header>
+		<div class="container">
+			<div class="row">
+				<div class="span6">
+					<h1>CW Event Tracking v0.1.1</h1>
+				</div>
+				<div class="span6">
+					<h2>Analytics Goal tracking with jQuery.</h2>
+				</div>
+			</div>
+		</div>
+    </header>
+
+    <div class="container">
+		<div class="row">
+			<div class="span12 center">
+				<a href="https://github.com/clivewalkden/cwEventTracking" class="btn btn-large btn-inverse" target="_blank">View Project on Github »</a>
+				<a href="https://github.com/clivewalkden/cwEventTracking/archive/v0.1.1.zip" class="btn btn-large">Download CW Event tracking</a>
+			</div>
+		</div>
 	</div>
+
+	<div role="main" class="container">
+		<div class="row">
+			<div class="span12">
+				<img src="https://travis-ci.org/clivewalkden/cwEventTracking.png?branch=develop">
+				<p>A jQuery plugin to automatically add Google Analytics tracking to certain links.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Todo</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<ul>
+					<li>Finish writing the unit tests.</li>
+					<li>Register on Bower.io</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Basic Usage</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<p>The code below...</p>
+				<pre class="prettyprint linenums lang-html">
+&lt;script src="/path/to/jquery.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+var _gaq=[['_setAccount','Your Tracking Code Here'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
+&lt;script src="dist/jquery.cw-event-tracking.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+jQuery(function($) {
+	$('a').CWEventTracking();
+});
+&lt;/script&gt;
+			</pre>
+			</div>
+			<div class="span12">
+				<p>... allows all links on pages with the script to be passed as goals to analytics.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Configuration Options</h1>
+				</div>
+			</div>
+			<div class="span12">
+				<table class="table table-bordered">
+				<tr>
+					<th>Property</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Changelog</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<table class="table table-bordered table-striped">
+				<tr>
+					<td><strong>v0.1.1</strong></td>
+					<td>18th March 2015</td>
+					<td>Updated bower config.</td>
+				</tr>
+				<tr>
+					<td><strong>v0.1.0</strong></td>
+					<td>2nd March 2014</td>
+					<td>Created the first version of the script based on previous created scripts.</td>
+				</tr>
+				</table>
+			</div>
+		</div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+<script>window.jQuery || document.write('<script src="bower_components/jquery/jquery.js"><\/script>')</script>
+
+
+
+<script>
+var _gaq=[['_setAccount','UA-38760705-1'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script src="src/cw-event-tracking.js?v=0.1.1"></script>
+<script src="http://clivewalkden.co.uk/code/template/js/bootstrap.js"></script>
+<script src="http://clivewalkden.co.uk/code/template/js/prettify.js"></script>
+
+<script>
+$(function(){
+	window.prettyPrint && prettyPrint();
+})
+</script>
+
+
 </body>
 </html>

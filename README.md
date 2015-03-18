@@ -19,7 +19,7 @@ var _gaq=[['_setAccount','Your Tracking Code Here'],['_trackPageview']];
 g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
-<script src="dist/cw-event-tracking.min.js"></script>
+<script src="dist/jquery.cw-event-tracking.min.js"></script>
 <script>
 jQuery(function($) {
 	$('a').CWEventTracking();
