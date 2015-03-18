@@ -4,6 +4,7 @@
   "ignore": [
   	"src",
     "test",
+    "libs",
   	"**/*.txt",
   	".editorconfig",
   	".travis.yml",
