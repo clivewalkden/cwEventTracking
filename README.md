@@ -60,6 +60,9 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Release History
+#### 0.2.0
+ * Added support for Universal analytics (with thanks to Jon Catmull)
+
 #### 0.1.2
  * Updated bower config again to remove lib folder
 

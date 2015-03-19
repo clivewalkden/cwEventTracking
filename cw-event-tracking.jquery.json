@@ -2,7 +2,7 @@
   "name": "cw-event-tracking",
   "title": "CW Event Tracking",
   "description": "A jQuery plugin to automatically add Google Analytics tracking to certain links",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "homepage": "https://github.com/clivewalkden/cwEventTracking",
   "author": {
     "name": "Clive Walkden",

@@ -43,7 +43,7 @@
   test('analytics check', function() {
     expect(1);
     stop();
-  
+
     this.elems.CWEventTracking({
       isActive: function(){
         ok(true,'Analytics is available');
