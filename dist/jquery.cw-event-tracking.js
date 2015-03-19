@@ -1,10 +1,15 @@
-/*
- * cw_event_tracking
- * https://github.com/clivewalkden/cwHideReveal
- *
- * Copyright (c) 2013 Clive Walkden
- * Licensed under the MIT license.
- */
+/*!
+* cw-event-tracking - for jQuery 1.7+
+* https://github.com/clivewalkden/cw-event-tracking
+*
+* Copyright 2015, Clive Walkden (http://clivewalkden.co.uk)
+*
+* @package CW Event Tracking
+* @author Clive Walkden (https://github.com/clivewalkden)
+* @version 0.2.0
+* @copyright Copyright (c) 2015 Clive Walkden (https://github.com/clivewalkden)
+* @date: 2015-03-19
+*/
 
 (function ($) {
 	$.fn.CWEventTracking = function (custom) {

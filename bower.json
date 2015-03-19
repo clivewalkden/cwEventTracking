@@ -1,15 +1,19 @@
 {
   "name": "cw-event-tracking",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "ignore": [
   	"src",
+    "test",
+    "libs",
   	"**/*.txt",
   	".editorconfig",
   	".travis.yml",
   	".bowerrc",
   	".jshintrc",
+    ".gitignore",
   	"index.html",
-  	"CONTRIBUTING.md"
+  	"CONTRIBUTING.md",
+    "Gruntfile.js"
   ],
   "dependencies": {
   	"jquery": "~1.7"
