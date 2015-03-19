@@ -30,13 +30,13 @@
 			analyticsCheck: function() {
 				methods.debug('Check Analytics is loaded.');
 
-				if (typeof  ga != 'undefined') {
+				if (typeof window.ga !== 'undefined') {
 					methods.debug('Universal Analytics is running');
 					settings.active = true;
 					settings.version = 'ga';
 					settings.isActive.call($(this));
 				}
-				else if (typeof  _gaq != 'undefined') {
+				else if (typeof window._gaq !== 'undefined') {
 					methods.debug('Analytics is running');
 					settings.active = true;
 					settings.version = '_gaq';
