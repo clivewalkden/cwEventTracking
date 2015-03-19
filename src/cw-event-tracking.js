@@ -17,6 +17,7 @@
 			baseHref	: '',
 			debug		: false,
 			active		: false,
+			version		: 'ga',
 			isActive	: function(){},
 			isInactive	: function(){},
 			isClicked	: function(){},
@@ -29,12 +30,21 @@
 			analyticsCheck: function() {
 				methods.debug('Check Analytics is loaded.');
 
-				if (typeof _gaq === 'undefined') {
+				if (typeof window.ga !== 'undefined') {
+					methods.debug('Universal Analytics is running');
+					settings.active = true;
+					settings.version = 'ga';
+					settings.isActive.call($(this));
+				}
+				else if (typeof window._gaq !== 'undefined') {
+					methods.debug('Analytics is running');
+					settings.active = true;
+					settings.version = '_gaq';
+					settings.isActive.call($(this));
+				}
+				else {
 					methods.debug('Analytics is not running');
 					settings.isInactive.call($(this));
-				}else{
-					settings.isActive.call($(this));
-					settings.active = true;
 				}
 			},
 			handleExternal: function(href) {
@@ -67,7 +77,11 @@
 				}
 			},
 			track : function(text, event, link) {
-				_gaq.push(['_trackEvent', text, event, link]);
+				if (settings.version === 'ga') {
+					ga('send', 'event', text, event, link);
+				}else{
+					_gaq.push(['_trackEvent', text, event, link]);
+				}
 			},
 			debug: function(message) {
 				if (settings.debug && typeof console !== 'undefined' && typeof console.debug !== 'undefined') {
