@@ -1,7 +1,7 @@
 [![Stories in Ready](https://badge.waffle.io/clivewalkden/cwEventTracking.png?label=ready&title=Ready)](https://waffle.io/clivewalkden/cwEventTracking)
 # CW Event Tracking
 
-[![Join the chat at https://gitter.im/clivewalkden/cwEventTracking](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/clivewalkden/cwEventTracking?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/clivewalkden/cwEventTracking](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/clivewalkden/cwEventTracking?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Greenkeeper badge](https://badges.greenkeeper.io/clivewalkden/cwEventTracking.svg)](https://greenkeeper.io/)
 
 A jQuery plugin to automatically add Google Analytics tracking to certain links
 
